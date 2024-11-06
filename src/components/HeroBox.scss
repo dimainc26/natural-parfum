@@ -1,0 +1,66 @@
+.hero {
+  .row {
+    .hero-box {
+      //   padding: 5px;
+      position: relative;
+
+      div {
+        margin: 10px;
+        position: relative;
+        width: calc(100% - 10px);
+        transition: 0.4s linear;
+
+        &:hover {
+          margin: 0;
+          padding: 0;
+          width: 100%;
+
+          .back {
+            width: 100%;
+          }
+
+          .front {
+            width: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+          }
+        }
+
+        .back {
+          width: calc(100% - 10px);
+          transition: 0.4s linear;
+
+          height: 220px;
+          border: solid 1px var(--accent-color);
+          border-radius: 4px;
+          background-position: center;
+          background-size: cover;
+        }
+
+        .front {
+          transition: 0.4s linear;
+          width: calc(94%);
+          height: 220px;
+          position: absolute;
+          z-index: 10;
+          top: 5%;
+          border-radius: 4px;
+          background-color: transparent;
+
+          .title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 12px 20px;
+            background-color: var(--neutral-transparent-color);
+            border-radius: 4px;
+            font-family: var(--font-mollie-glaston);
+            font-weight: 700;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}

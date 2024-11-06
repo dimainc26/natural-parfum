@@ -1,5 +1,9 @@
 @import "node_modules/bootstrap/scss/bootstrap";
 @import "./components/Navbar.scss";
+
+// Home
 @import "./components/Header.scss";
+@import "./components/Hero.scss";
+@import "./components/HeroBox.scss";
 @import "./components/BestSellersProducts.scss";
 @import "./components/BestProductItem.scss";
