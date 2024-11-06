@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Luxery";
+  src: url("./assets/fonts/Luxery.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mollie Glaston";
+  src: url("./assets/fonts/Mollie-Glaston.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Graphit";
+  src: url("./assets/fonts/Graphit.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --font-luxery: "Luxery";
+  --font-mollie-glaston: "Mollie Glaston", cursive;
+  --font-graphit: "Graphit";
+}

@@ -1,0 +1,69 @@
+@import url("./colors.scss");
+@import url("./fonts.scss");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: unset !important;
+  text-decoration: none !important;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+[class^="btn-"] {
+  border: solid 1px var(--accent-color) !important;
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-family: var(--font-graphit);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-light {
+  color: var(--accent-color);
+  background-color: unset;
+
+  svg,
+  span {
+    position: relative;
+    z-index: 10;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent-color);
+    transition: left 0.4s ease;
+    z-index: 0;
+  }
+  &:hover {
+    svg,
+    span {
+      color: var(--tertiary-color);
+    }
+  }
+
+  &:hover::after {
+    left: 0;
+  }
+}
+
+.btn-cta {
+  background-color: var(--accent-color);
+  color: var(--tertiary-color);
+}

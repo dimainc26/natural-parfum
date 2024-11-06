@@ -1,0 +1,16 @@
+{
+  "nav": {
+    "home": "Home",
+    "pages": "Pages",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "shop": "Shop",
+    "contacts": "Contacts"
+  },
+  "home": {},
+  "pages": {},
+  "portfolio": {},
+  "blog": {},
+  "shop": {},
+  "contacts": {}
+}
