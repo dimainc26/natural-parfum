@@ -1,0 +1,24 @@
+.title {
+  font-family: var(--font-mollie-glaston);
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 60px;
+  max-width: 100%;
+  color: var(--accent-color);
+
+  &.medium {
+    font-size: 1.4rem;
+    line-height: normal;
+  }
+
+  &.normal {
+    font-size: 2rem;
+    line-height: normal;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.8rem;
+    line-height: normal;
+    text-align: center;
+  }
+}

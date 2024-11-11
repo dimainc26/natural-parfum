@@ -1,9 +1,27 @@
 @import "node_modules/bootstrap/scss/bootstrap";
+
 @import "./components/Navbar.scss";
+
+// Essentials
+@import "./components/Essentials/Essentials.scss";
+
+// System
+@import "./components/System/System.scss";
 
 // Home
 @import "./components/Header.scss";
 @import "./components/Hero.scss";
 @import "./components/HeroBox.scss";
+@import "./components/OnTop.scss";
+@import "./components/OnTopComponent.scss";
+@import "./components/PromoBannersSlide.scss";
+@import "./components/PromoBanner.scss";
 @import "./components/BestSellersProducts.scss";
 @import "./components/BestProductItem.scss";
+@import "./components/WhoChooseUs.scss";
+@import "./components/HighLightList.scss";
+@import "./components/HighLightCard.scss";
+@import "./components/Testimonials.scss";
+@import "./components/HorizontalPhotoGallery.scss";
+@import "./components/SubscriptionBanner.scss";
+@import "./components/Footer.scss";

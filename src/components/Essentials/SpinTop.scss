@@ -1,0 +1,14 @@
+.spin-top {
+  width: 60px;
+  height: 60px;
+
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  z-index: 1050;
+  bottom: 10%;
+  right: 2%;
+}

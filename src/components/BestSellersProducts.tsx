@@ -79,7 +79,7 @@ const BestSellersProducts = () => {
   ];
 
   return (
-    <section className="container best-sellers-products">
+    <section className="container best-sellers-products py-5">
       <div className="d-flex flex-column align-items-center gap-4 justify-content-center">
         <h2 className="title">Best Sellers Products</h2>
         <p className="slug">The stylish and organized cosmetic products</p>

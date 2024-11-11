@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { FaBars, FaShoppingBag, FaStar, FaSearch } from "react-icons/fa";
+import { FaBars, FaSearch, FaStar } from "react-icons/fa";
+import NavIconGroup from "./NavIconGroup";
 
 const DesktopNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,11 +37,22 @@ const DesktopNavbar = () => {
             <a href="#">Contacts</a>
           </li>
         </ul>
-        <div className="nav-icons">
-          <FaShoppingBag className="icon" />
-          <FaStar className="icon" />
-          <FaSearch className="icon" />
-        </div>
+        <NavIconGroup
+          icons={[
+            {
+              active: false,
+              name: FaStar,
+              size: "medium",
+              onClick: () => null,
+            },
+            {
+              active: false,
+              name: FaSearch,
+              size: "medium",
+              onClick: () => null,
+            },
+          ]}
+        />
       </div>
     </nav>
   );

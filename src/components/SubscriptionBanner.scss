@@ -1,0 +1,75 @@
+.subscription-banner {
+  height: 400px !important;
+  position: relative;
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  background-image: url("../pngs/liquid-or.jpg");
+  background-size: cover;
+  background-position: center;
+
+  @media screen and (max-width: 768px) {
+    height: 360px !important;
+  }
+
+  .front {
+    height: 100% !important;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      justify-content: center !important;
+      width: 100% !important;
+      align-items: center !important;
+    }
+
+    .left {
+      @media screen and (max-width: 768px) {
+        padding-left: 0;
+        width: 100% !important;
+      }
+
+      form {
+        @media screen and (max-width: 768px) {
+          padding: 2% 5%;
+        }
+
+        input {
+          border: 1px solid var(--accent-color);
+          padding: 10px 15px;
+          border-radius: 4px;
+          flex-grow: 1;
+          font-size: 1rem;
+        }
+
+        button {
+          background-color: var(--accent-color);
+          color: white;
+          font-size: 1rem;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 4px;
+
+          &:hover {
+            background-color: var(--accent-color);
+          }
+        }
+      }
+    }
+
+    .right {
+      width: calc(100% / 3);
+      height: 100% !important;
+      background-image: url("../pngs/right-model.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: right;
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+}

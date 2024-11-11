@@ -3,18 +3,19 @@ type Props = {
   title: string;
   img?: string;
   direction: "left" | "right";
+  onClick: () => void;
 };
 
-const HeroBox = ({ width, title, img, direction }: Props) => {
+const HeroBox = ({ width, title, direction }: Props) => {
   if (width === "large") {
     return (
-      <div className="hero-box col-md-6">
+      <div className="hero-box col-4 col-md-6">
         <div>
           <div className="back"></div>
           <div
             className="front d-flex justify-content-center align-items-center"
             style={{
-              backgroundImage: "url(../../public/pngs/liquid-or.jpg)",
+              backgroundImage: "url(./pngs/liquid-or.jpg)",
               [direction === "left" ? "left" : "right"]: "5%",
             }}
           >
@@ -26,13 +27,13 @@ const HeroBox = ({ width, title, img, direction }: Props) => {
   }
 
   return (
-    <div className="hero-box col-md-3">
+    <div className="hero-box col-4 col-md-3">
       <div>
         <div className="back"></div>
         <div
           className="front d-flex justify-content-center align-items-center"
           style={{
-            backgroundImage: "url(../../public/pngs/liquid-or.jpg)",
+            backgroundImage: "url(./pngs/liquid-or.jpg)",
             [direction === "left" ? "left" : "right"]: "5%",
           }}
         >
