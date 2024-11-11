@@ -1,0 +1,37 @@
+.categories-box {
+  display: flex;
+  height: 60px;
+
+  > div {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 70%;
+    overflow: hidden;
+
+    .category-btn {
+      background: var(--neutral-color);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 16px;
+      color: var(--primary-color);
+      cursor: pointer;
+      transition: transform 0.3s ease, background 0.3s ease;
+
+      &.active {
+        background: var(--primary-color);
+        color: var(--neutral-color);
+      }
+
+      &:hover {
+        background: var(--secondary-color);
+        color: var(--neutral-color);
+      }
+    }
+  }
+}

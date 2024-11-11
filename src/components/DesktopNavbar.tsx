@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaBars, FaSearch, FaStar } from "react-icons/fa";
 import NavIconGroup from "./NavIconGroup";
+import { NavLink } from "react-router-dom";
 
 const DesktopNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,25 +17,25 @@ const DesktopNavbar = () => {
         </button>
         <ul className="nav-links d-flex align-self-center">
           <li>
-            <a href="#">Home</a>
+            <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            <a href="#">Pages</a>
+            <NavLink to="/pages">Pages</NavLink>
           </li>
           <li>
-            <a href="#">Portfolio</a>
+            <NavLink to="/portfolio">Portfolio</NavLink>
           </li>
         </ul>
         <div className="logo">logo</div>
         <ul className="nav-links d-flex align-self-center">
           <li>
-            <a href="#">Blog</a>
+            <NavLink to="/blog">Blog</NavLink>
           </li>
           <li>
-            <a href="#">Shop</a>
+            <NavLink to="/shop">Shop</NavLink>
           </li>
           <li>
-            <a href="#">Contacts</a>
+            <NavLink to="/contacts">Contacts</NavLink>
           </li>
         </ul>
         <NavIconGroup

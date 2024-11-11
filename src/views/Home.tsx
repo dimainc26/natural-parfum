@@ -12,7 +12,13 @@ import WhoChooseUs from "../components/WhoChooseUs";
 const Home = () => {
   return (
     <>
-      <Header />
+      <Header
+        ctaText="Check our Products"
+        ctaAction={() => null}
+        special="Hot Gift"
+        slug="There is always a lingering, familiar smell that it leaves behind"
+        title="A Perfect Perfume For Every Mood"
+      />
       <Hero />
       <OnTop />
       <PromoBannersSlide />

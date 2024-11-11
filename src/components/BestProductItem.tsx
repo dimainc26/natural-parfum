@@ -14,7 +14,7 @@ const BestProductItem = ({ parfum }: Props) => {
     <article className="best-article col-6 col-lg-3 col-md-3">
       <div>
         <p className="p-img-box d-flex justify-content-center align-items-center">
-          <img src="./pngs/p-jordan.png" alt="p-jordan" />
+          <img src={parfum.img} alt="p-jordan" />
         </p>
         <div className="p-details d-flex flex-column justify-content-center align-items-center">
           <div className="star-box d-flex">

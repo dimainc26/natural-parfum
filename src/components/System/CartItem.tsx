@@ -42,7 +42,7 @@ const CartItem = ({ product }: Props) => {
   return (
     <li key={product.id} className="cart-item">
       <p className="img">
-        <img src="./pngs/p-jordan.png" alt={product.name} />
+        <img src={product.img} alt={product.name} />
       </p>
       <p className="name">{product.name}</p>
       <p className="quantity">{product.quantity}</p>

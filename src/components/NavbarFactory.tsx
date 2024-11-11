@@ -15,9 +15,9 @@ const NavbarFactory = () => {
       const currentScrollY = window.scrollY;
 
       if (currentScrollY > lastScrollY && currentScrollY > 50) {
-        setIsScrolled(true); // Scroll verso il basso
+        setIsScrolled(true);
       } else if (currentScrollY < lastScrollY) {
-        setIsScrolled(false); // Scroll verso l'alto
+        setIsScrolled(false);
       }
 
       setLastScrollY(currentScrollY);
@@ -28,7 +28,7 @@ const NavbarFactory = () => {
   }, [lastScrollY]);
 
   const handleToggleNavbar = () => {
-    setIsScrolled(false); // Ritorna alla DesktopNavbar
+    setIsScrolled(false);
   };
 
   return (

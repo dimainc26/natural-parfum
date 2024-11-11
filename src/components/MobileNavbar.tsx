@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaBars, FaShoppingBag, FaStar, FaSearch } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 const MobileNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,22 +24,22 @@ const MobileNavbar = () => {
       <div className={`mobile-nav-links ${isMenuOpen ? "show" : ""}`}>
         <ul className="nav-links d-flex flex-column align-self-center">
           <li>
-            <a href="#">Home</a>
+            <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            <a href="#">Pages</a>
+            <NavLink to="/pages">Pages</NavLink>
           </li>
           <li>
-            <a href="#">Portfolio</a>
+            <NavLink to="/portfolio">Portfolio</NavLink>
           </li>
           <li>
-            <a href="#">Blog</a>
+            <NavLink to="/Blog">Blog</NavLink>
           </li>
           <li>
-            <a href="#">Shop</a>
+            <NavLink to="/shop">Shop</NavLink>
           </li>
           <li>
-            <a href="#">Contacts</a>
+            <NavLink to="/contacts">Contacts</NavLink>
           </li>
         </ul>
       </div>
