@@ -1,5 +1,4 @@
 import Categories from "../components/Essentials/Categories";
-import Footer from "../components/Footer";
 import Header from "../components/Header";
 import AllProducts from "../components/System/AllProducts";
 
@@ -17,7 +16,6 @@ const Shop = () => {
       />
       <Categories />
       <AllProducts />
-      <Footer />
     </>
   );
 };

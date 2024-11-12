@@ -1,6 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useState } from "react";
-import { setPage } from "../../services/store/productsSlice";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
+import {
+  setPage,
+  syncCategoriesFromURL,
+} from "../../services/store/productsSlice";
 import ProductItem from "./ProductItem";
 import Title from "../Essentials/Title";
 import type { RootState } from "../../services/store";
@@ -8,6 +12,8 @@ import Slug from "../Essentials/Slug";
 
 const AllProducts = () => {
   const dispatch = useDispatch();
+  const [searchParams, setSearchParams] = useSearchParams();
+
   const {
     paginatedProducts,
     currentPage,
@@ -18,12 +24,37 @@ const AllProducts = () => {
 
   const [animationClass, setAnimationClass] = useState("");
 
+  // Sincronizzare categorie dall'URL
+  useEffect(() => {
+    const categoriesFromURL = searchParams.getAll("cat") as CategoryId[];
+    if (
+      categoriesFromURL.length > 0 &&
+      categoriesFromURL.join(",") !== selectedCategories.join(",")
+    ) {
+      dispatch(syncCategoriesFromURL(categoriesFromURL));
+    }
+  }, [searchParams, selectedCategories, dispatch]);
+
+  // Sincronizzare pagina dall'URL
+  useEffect(() => {
+    const pageFromURL = Number(searchParams.get("page")) || 1;
+    if (pageFromURL !== currentPage) {
+      dispatch(setPage(pageFromURL));
+    }
+  }, [searchParams, currentPage, dispatch]);
+
   const handlePageChange = (page: number) => {
     if (page >= 1 && page <= totalPages) {
       setAnimationClass("exit-right");
 
       setTimeout(() => {
         dispatch(setPage(page));
+
+        // Unione dei parametri esistenti e aggiornamento del parametro pagina
+        const updatedParams = new URLSearchParams(searchParams.toString());
+        updatedParams.set("page", page.toString());
+        setSearchParams(updatedParams);
+
         setAnimationClass("enter-left");
       }, 600);
     }

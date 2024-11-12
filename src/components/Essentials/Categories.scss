@@ -2,13 +2,24 @@
   display: flex;
   height: 60px;
 
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    height: min-content;
+    padding-bottom: 0 !important;
+    justify-content: center;
+    align-items: center;
+  }
+
   > div {
     height: 50px;
-    display: flex;
     justify-content: center;
     gap: 20px;
     width: 70%;
     overflow: hidden;
+
+    @media screen and (max-width: 768px) {
+      width: 100% !important;
+    }
 
     .category-btn {
       background: var(--neutral-color);
@@ -23,13 +34,23 @@
       cursor: pointer;
       transition: transform 0.3s ease, background 0.3s ease;
 
+      @media screen and (max-width: 768px) {
+        padding: 0;
+        margin: 0;
+        background-color: unset;
+        min-width: 30% !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
       &.active {
         background: var(--primary-color);
         color: var(--neutral-color);
       }
 
       &:hover {
-        background: var(--secondary-color);
+        background: var(--accent-color);
         color: var(--neutral-color);
       }
     }

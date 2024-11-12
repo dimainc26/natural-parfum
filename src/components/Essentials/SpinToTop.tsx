@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { FaArrowUp } from "react-icons/fa";
 
-const SpinTop = () => {
+const SpinToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const scrollToTop = () => {
@@ -38,4 +38,4 @@ const SpinTop = () => {
   );
 };
 
-export default SpinTop;
+export default SpinToTop;

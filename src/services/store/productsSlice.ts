@@ -4,7 +4,7 @@ import type { ProductType } from "../../models/ProductType";
 import type { CategoryId } from "../../models/CategoryType";
 
 interface ProductsState {
-  selectedCategories: CategoryId[]; // Ora usa CategoryId
+  selectedCategories: CategoryId[];
   currentPage: number;
   paginatedProducts: ProductType[];
   filteredProducts: ProductType[];
@@ -43,10 +43,18 @@ const productsSlice = createSlice({
   name: "products",
   initialState,
   reducers: {
+    syncCategoriesFromURL(state, action: PayloadAction<CategoryId[]>) {
+      state.selectedCategories = action.payload;
+      const filtered = filterProducts(testData, state.selectedCategories);
+      state.filteredProducts = filtered;
+      state.totalPages = Math.ceil(filtered.length / PRODUCTS_PER_PAGE);
+      state.paginatedProducts = paginateProducts(filtered, 1);
+      state.currentPage = 1;
+    },
+
     toggleCategory(state, action: PayloadAction<CategoryId>) {
       const category = action.payload;
 
-      // Gestisci le categorie selezionate
       if (state.selectedCategories.includes(category)) {
         state.selectedCategories = state.selectedCategories.filter(
           (cat) => cat !== category
@@ -55,11 +63,9 @@ const productsSlice = createSlice({
         state.selectedCategories.push(category);
       }
 
-      // Aggiorna i prodotti filtrati
       const filtered = filterProducts(testData, state.selectedCategories);
       state.filteredProducts = filtered;
 
-      // Calcola le pagine totali e resetta la paginazione
       state.totalPages = Math.ceil(filtered.length / PRODUCTS_PER_PAGE);
       state.currentPage = 1;
       state.paginatedProducts = paginateProducts(filtered, 1);
@@ -74,5 +80,6 @@ const productsSlice = createSlice({
   },
 });
 
-export const { toggleCategory, setPage } = productsSlice.actions;
+export const { toggleCategory, setPage, syncCategoriesFromURL } =
+  productsSlice.actions;
 export default productsSlice.reducer;

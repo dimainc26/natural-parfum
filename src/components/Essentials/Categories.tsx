@@ -3,6 +3,7 @@ import { toggleCategory } from "../../services/store/productsSlice";
 import type { RootState } from "../../services/store";
 import { FaFlask, FaGem, FaLeaf } from "react-icons/fa";
 import type { CategoryType } from "../../models/CategoryType";
+import useURLParams from "../../hooks/useUrlParams";
 
 const categories: CategoryType[] = [
   { id: "floral", name: "Floral", icon: FaLeaf },
@@ -16,8 +17,11 @@ const Categories = () => {
     (state: RootState) => state.products.selectedCategories
   );
 
+  const { toggleParam } = useURLParams();
+
   const handleCategoryClick = (id: "floral" | "oriental" | "woody") => {
     dispatch(toggleCategory(id));
+    toggleParam("cat", id);
   };
 
   return (

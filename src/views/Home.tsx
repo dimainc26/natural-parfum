@@ -1,5 +1,4 @@
 import BestSellersProducts from "../components/BestSellersProducts";
-import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import HorizontalPhotoGallery from "../components/HorizontalPhotoGallery";
@@ -27,7 +26,6 @@ const Home = () => {
       <Testimonials />
       <HorizontalPhotoGallery />
       <SubscriptionBanner />
-      <Footer />
     </>
   );
 };

@@ -1,13 +1,15 @@
 import { Outlet } from "react-router-dom";
 import NavbarFactory from "./NavbarFactory";
-import SpinTop from "./Essentials/SpinTop";
+import SpinToTop from "./Essentials/SpinToTop.tsx";
+import Footer from "./Footer.tsx";
 
 const Root = () => {
   return (
     <>
       <NavbarFactory />
-      <SpinTop />
+      <SpinToTop />
       <Outlet />
+      <Footer />
     </>
   );
 };
