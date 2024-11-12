@@ -84,6 +84,8 @@
   }
 }
 
+// ____________________________MiniNavBar
+
 .mini-navbar {
   border-bottom-left-radius: 20px;
   background-color: var(--neutral-color);
@@ -93,6 +95,13 @@
   top: 0;
   right: 0;
   padding: 1%;
+
+  @media screen and (max-width: 768px) {
+    width: 30%;
+
+    display: flex;
+    gap: 0;
+  }
 
   > .shop-cart {
     padding-top: 8px;
@@ -106,6 +115,22 @@
     }
 
     .dropdown-menu {
+      @media screen and (max-width: 768px) {
+        width: 100dvw !important;
+        right: -125%;
+
+        .cart-list {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+
+          .cart-item {
+            width: 100%;
+            gap: 6px;
+          }
+        }
+      }
+
       svg {
         width: 50% !important;
       }
@@ -133,10 +158,50 @@
 
 @media screen and (max-width: 768px) {
   .navbar-custom {
-    position: relative;
-
     .menu-toggle {
       z-index: 1001;
+    }
+
+    .container {
+      .nav-icons {
+        .shop-cart {
+          background-color: red;
+          width: 40px;
+          height: 40px;
+
+          .dropdown-menu {
+            @media screen and (max-width: 768px) {
+              width: 100dvw !important;
+              right: -375%;
+
+              .cart-list {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                .cart-item {
+                  width: 100%;
+                  gap: 6px;
+
+                  .quantity-actions {
+                    button {
+                      width: 50px;
+
+                      svg {
+                        transform: scale(1.8);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            svg {
+              width: 50% !important;
+            }
+          }
+        }
+      }
     }
 
     .mobile-nav-links {

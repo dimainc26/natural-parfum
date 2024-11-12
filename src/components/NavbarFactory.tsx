@@ -1,8 +1,9 @@
 import { useMediaQuery } from "react-responsive";
 import MobileNavbar from "./MobileNavbar";
 import DesktopNavbar from "./DesktopNavbar";
-import { useEffect, useState } from "react";
 import MiniNavBar from "./MiniNavBar";
+import { useState, useEffect } from "react";
+import { throttle } from "lodash";
 
 const NavbarFactory = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
@@ -11,21 +12,32 @@ const NavbarFactory = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = throttle(() => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY > lastScrollY && currentScrollY > 50) {
-        setIsScrolled(true);
-      } else if (currentScrollY < lastScrollY) {
-        setIsScrolled(false);
+      // Condizioni diverse per mobile e desktop
+      if (isMobile) {
+        if (currentScrollY > 50 && currentScrollY > lastScrollY) {
+          setIsScrolled(true);
+        } else if (currentScrollY < lastScrollY - 30 || currentScrollY < 50) {
+          setIsScrolled(false);
+        }
+      } else {
+        if (currentScrollY > 100 && currentScrollY > lastScrollY) {
+          setIsScrolled(true);
+        } else if (currentScrollY < lastScrollY - 50 || currentScrollY < 100) {
+          setIsScrolled(false);
+        }
       }
 
       setLastScrollY(currentScrollY);
-    };
+    }, 100);
 
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY, isMobile]);
 
   const handleToggleNavbar = () => {
     setIsScrolled(false);
@@ -33,10 +45,10 @@ const NavbarFactory = () => {
 
   return (
     <>
-      {isMobile ? (
-        <MobileNavbar />
-      ) : isScrolled ? (
+      {isScrolled ? (
         <MiniNavBar onToggleNavbar={handleToggleNavbar} />
+      ) : isMobile ? (
+        <MobileNavbar />
       ) : (
         <DesktopNavbar />
       )}

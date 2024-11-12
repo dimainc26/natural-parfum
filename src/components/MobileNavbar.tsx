@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { FaBars, FaShoppingBag, FaStar, FaSearch } from "react-icons/fa";
+import { FaBars, FaStar, FaSearch } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
+import Cart from "./System/Cart";
 
 const MobileNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,7 +17,7 @@ const MobileNavbar = () => {
         </button>
         <div className="logo">logo</div>
         <div className="nav-icons">
-          <FaShoppingBag className="icon" />
+          <Cart />
           <FaStar className="icon" />
           <FaSearch className="icon" />
         </div>

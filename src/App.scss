@@ -1,6 +1,12 @@
 @import url("./colors.scss");
 @import url("./fonts.scss");
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

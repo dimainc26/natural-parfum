@@ -39,6 +39,10 @@
 
       .p-title {
         font-family: var(--font-graphit);
+        max-width: 100% !important;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
 
         @media screen and (max-width: 768px) {
           margin: 12px auto;

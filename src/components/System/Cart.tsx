@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { FaMoneyCheck, FaShoppingCart } from "react-icons/fa";
+import { FaInfoCircle, FaMoneyCheck, FaShoppingCart } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
 import type { CartProductType } from "../../models/CartProductType";
@@ -21,6 +21,16 @@ const Cart = () => {
       toast.info("Votre panier est vide ! 🛒", {
         position: "top-right",
         autoClose: 3000,
+        icon: <FaInfoCircle color="var(--primary-color)" />,
+        style: {
+          backgroundColor: "var(--neutral-color)",
+          color: "var(--accent-color)",
+          borderRadius: "10px",
+          boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+        },
+        progressStyle: {
+          backgroundColor: "var(--primary-color)",
+        },
       });
 
       setShowDropdown(false);
