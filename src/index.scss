@@ -8,7 +8,6 @@
 
 // Home
 @import "./components/Header.scss";
-@import "./components/Hero.scss";
 @import "./components/HeroBox.scss";
 @import "./components/OnTop.scss";
 @import "./components/OnTopComponent.scss";
@@ -23,3 +22,7 @@
 
 // Shop
 @import "./components/Shop/Shop.scss";
+
+// Contacts
+@import "./components/ElegantImage.scss";
+@import "./components/ContactElement/Elements.scss";

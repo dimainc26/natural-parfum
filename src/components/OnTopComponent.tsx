@@ -60,7 +60,7 @@ const OnTopComponent = ({ variant, first, second }: Props) => {
       <div id="img-container-2">
         <p className="back-img"></p>
         <p className="img-box left">
-          <img src="./pngs/p-grace-eau.png" alt="left model" />
+          <img src="./parfums/p-grace-eau.png" alt="left model" />
         </p>
       </div>
     </div>

@@ -9,6 +9,7 @@ import ProductItem from "./ProductItem";
 import Title from "../Essentials/Title";
 import type { RootState } from "../../services/store";
 import Slug from "../Essentials/Slug";
+import type { CategoryId } from "../../models/CategoryType";
 
 const AllProducts = () => {
   const dispatch = useDispatch();

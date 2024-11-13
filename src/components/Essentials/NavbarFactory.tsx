@@ -15,7 +15,6 @@ const NavbarFactory = () => {
     const handleScroll = throttle(() => {
       const currentScrollY = window.scrollY;
 
-      // Condizioni diverse per mobile e desktop
       if (isMobile) {
         if (currentScrollY > 50 && currentScrollY > lastScrollY) {
           setIsScrolled(true);

@@ -20,10 +20,7 @@ const DesktopNavbar = () => {
             <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            <NavLink to="/pages">Pages</NavLink>
-          </li>
-          <li>
-            <NavLink to="/portfolio">Portfolio</NavLink>
+            <NavLink to="/shop">Shop</NavLink>
           </li>
         </ul>
         <div className="logo">logo</div>
@@ -31,9 +28,7 @@ const DesktopNavbar = () => {
           <li>
             <NavLink to="/blog">Blog</NavLink>
           </li>
-          <li>
-            <NavLink to="/shop">Shop</NavLink>
-          </li>
+
           <li>
             <NavLink to="/contacts">Contacts</NavLink>
           </li>
