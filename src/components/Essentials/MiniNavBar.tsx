@@ -1,5 +1,5 @@
 import { FaBars } from "react-icons/fa";
-import Cart from "./System/Cart";
+import Cart from "../Shop/Cart";
 
 type MiniNavBarProps = {
   onToggleNavbar: () => void;

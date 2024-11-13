@@ -1,6 +1,6 @@
-import Categories from "../components/Essentials/Categories";
+import Categories from "../components/Shop/Categories";
 import Header from "../components/Header";
-import AllProducts from "../components/System/AllProducts";
+import AllProducts from "../components/Shop/AllProducts";
 
 const Shop = () => {
   return (

@@ -1,5 +1,5 @@
 import type { IconType } from "react-icons";
-import Cart from "./System/Cart";
+import Cart from "../Shop/Cart";
 
 type Props = {
   icons: IconMaterialize[];

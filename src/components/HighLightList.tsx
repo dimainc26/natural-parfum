@@ -1,6 +1,6 @@
 import HighLightCard from "./HighLightCard";
 import { FaStackExchange } from "react-icons/fa";
-import Spacer from "./Spacer";
+import Spacer from "./Essentials/Spacer";
 
 const HighLightList = () => {
   return (

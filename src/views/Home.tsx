@@ -1,4 +1,4 @@
-import BestSellersProducts from "../components/BestSellersProducts";
+import BestSellersProducts from "../components/Shop/BestSellersProducts";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import HorizontalPhotoGallery from "../components/HorizontalPhotoGallery";

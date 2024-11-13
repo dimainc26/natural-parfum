@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaBars, FaStar, FaSearch } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
-import Cart from "./System/Cart";
+import Cart from "../Shop/Cart";
 
 const MobileNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
