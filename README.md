@@ -15,6 +15,8 @@
 
 ## Captures d'écran
 ![Home Screen](https://github.com/dimainc26/natural_parfum/blob/main/assets/home.png)
+![Home Screen](https://github.com/dimainc26/natural_parfum/blob/main/assets/feature1.png)
+![Home Screen](https://github.com/dimainc26/natural_parfum/blob/main/assets/feature2.png)
 
 ## Démo
 [Lien vers la démo](https://dev.dimazanre.com/natural_parfum)
