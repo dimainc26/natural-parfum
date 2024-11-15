@@ -19,5 +19,3 @@
 ## Démo
 [Lien vers la démo](https://dev.dimazanre.com/natural_parfum)
 
-## Contributions
-Les contributions sont les bienvenues. N'hésitez pas à soumettre des pull requests ou à ouvrir des issues pour discuter des améliorations.
